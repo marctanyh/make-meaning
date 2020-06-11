@@ -1,0 +1,7 @@
+# Change this ya
+
+SECRET_KEY_BASE: "fakefakefakefakefakefakefakefakefakefakefakefake"
+AWS_ACCESS_KEY_ID: "fakefakefakefakefakefakefakefakefakefake"
+AWS_SECRET_ACCESS_KEY: "fakefakefakefakefakefakefakefakefakefake"
+S3_BUCKET_NAME: "your-app-name"
+AWS_REGION: "us-east-1"

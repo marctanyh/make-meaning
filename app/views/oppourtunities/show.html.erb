@@ -1,0 +1,28 @@
+
+<div class="oppourtunity-main-photo" style="background-image:url('<%= oppourtunity_photo_url @oppourtunity %>')">
+  <div class="photo-overlay">
+  </div>
+</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+ 
+        <p>
+          <strong>Title:</strong>
+          <%= @oppourtunity.name %>
+        </p>
+
+        <p>
+          <strong>Description:</strong>
+          <%= @oppourtunity.body %>
+        </p>
+
+      </div>
+
+    <div class="col-4">
+      <%= render "oppourtunities/user_details"%>
+      killer mike
+    </div>
+</div>
+</div>
+</div>
