@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_10_174114) do
+ActiveRecord::Schema.define(version: 2020_06_16_224701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,10 @@ ActiveRecord::Schema.define(version: 2020_06_10_174114) do
     t.string "unconfirmed_email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "image"
+    t.string "company"
+    t.boolean "admin", default: false
+    t.text "details"
     t.index ["email"], name: "index_accounts_on_email", unique: true
     t.index ["reset_password_token"], name: "index_accounts_on_reset_password_token", unique: true
   end
@@ -46,7 +50,22 @@ ActiveRecord::Schema.define(version: 2020_06_10_174114) do
     t.string "photo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "conclusion"
+    t.text "introduction"
+    t.boolean "open", default: true
+    t.datetime "application_date"
     t.index ["account_id"], name: "index_oppourtunities_on_account_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.string "url"
+    t.string "summary"
+    t.text "body"
+    t.string "image"
+    t.boolean "active", default: true
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

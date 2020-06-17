@@ -1,0 +1,17 @@
+<% oppourtunities.each do |oppourtunity| %>
+  <div class="col-4">
+    <div class="oppourtunity border">
+      
+
+      <div class="oppourtunity-thumb" style="background-image: url(<%= oppourtunity_thumbnail_url(oppourtunity) %>)">
+        <%= link_to "", oppourtunity_path(oppourtunity)  %>
+      </div>
+      <div class="oppourtunity-summary p-3">
+        <h3 class="h5"><%= link_to oppourtunity.name, oppourtunity_path(oppourtunity), class:"text-dark"%></h3>
+        <p class="text-muted"><%= truncate(oppourtunity.body, length: 50) %></p>
+      </div>
+
+
+    </div>
+  </div>
+<% end %>

@@ -6,13 +6,12 @@ class Account < ApplicationRecord
 
   has_many :oppourtunities 
 
+  mount_uploader :image, ProfilePictureUploader
+
   def full_name
     "#{first_name} #{last_name}"
 
   end
 
-  def company 
-    "Red Cross Society"
-  end
-  
+
 end

@@ -12,6 +12,7 @@ class OppourtunitiesController < ApplicationController
   # GET /oppourtunities/1.json
   def show
     @user = @oppourtunity.account
+    @user_oppourtunities = Oppourtunity.where(account_id: @user.id).where.not(id: @oppourtunity.id)
   end
 
   # GET /oppourtunities/new
@@ -64,6 +65,28 @@ class OppourtunitiesController < ApplicationController
     end
   end
 
+  def email_user
+    # trigger email send
+    user_id = params[:user_id]
+    first_name = params[:first_name]
+    last_name = params[:last_name]
+    email = params[:email]
+    message = params[:message]
+
+    logger.debug "User: #{:user_id}"
+    logger.debug "First name: #{:first_name}"
+    logger.debug "Last name: #{:last_name}"
+    logger.debug "Email: #{:email}"
+    logger.debug "Message: #{:message}"
+
+    ContactMailer.email_user( user_id, first_name, last_name,  email, message ).deliver_now
+
+    # response to script 
+    respond_to do |format|
+      format.json { head :no_content }  
+    end  
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_oppourtunity
@@ -76,6 +99,6 @@ class OppourtunitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def oppourtunity_params
-      params.require(:oppourtunity).permit(:name, :body, :photo, :photo_cache)
+      params.require(:oppourtunity).permit(:name, :body, :photo, :photo_cache, :introduction, :conclusion, :open, :application_date)
     end
 end

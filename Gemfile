@@ -23,6 +23,17 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+gem 'devise'
+
+# image uploads to Amazon S3
+gem 'carrierwave', "0.10.0"
+gem 'fog', '~> 1.37.0'
+gem 'carrierwave-postgresql-table', '~> 1.1.0'
+gem 'rmagick'
+
+# image resizing 
+gem 'mini_magick'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
@@ -52,11 +63,3 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'devise'
-
-# image uploads to Amazon S3
-gem 'carrierwave', "0.10.0"
-gem 'fog', '~> 1.37.0'
-
-# image resizing 
-gem 'mini_magick'

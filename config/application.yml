@@ -1,7 +1,7 @@
 # Change this ya
 
-SECRET_KEY_BASE: "fakefakefakefakefakefakefakefakefakefakefakefake"
-AWS_ACCESS_KEY_ID: "fakefakefakefakefakefakefakefakefakefake"
-AWS_SECRET_ACCESS_KEY: "fakefakefakefakefakefakefakefakefakefake"
-S3_BUCKET_NAME: "your-app-name"
+SECRET_KEY_BASE: "c3c6220db40d52218f41212c89f1b67b130f43f982ebe49b378cab3ce03e85015830923f35a6154d2b197ee0fd7cbedfb371fb253851e17b575d11d7deec6a2b"
+AWS_ACCESS_KEY_ID: "AKIAJ2ZT3HEI477I6ZAQ"
+AWS_SECRET_ACCESS_KEY: "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"
+S3_BUCKET_NAME: "make-meaning"
 AWS_REGION: "us-east-1"

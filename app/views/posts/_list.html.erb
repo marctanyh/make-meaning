@@ -1,0 +1,17 @@
+<% posts.each do |post| %>
+  <div class="col-4">
+    <div class="oppourtunity border">
+      
+
+      <div class="oppourtunity-thumb" style="background-image: url(<%= post_thumbnail_url(post) %>)">
+        <%= link_to "", post_path(post)  %>
+      </div>
+      <div class="oppourtunity-summary p-3">
+        <h3 class="h5"><%= link_to post.title, post_path(post), class:"text-dark"%></h3>
+        <p class="text-muted"><%= truncate(post.summary, length: 50) %></p>
+      </div>
+
+
+    </div>
+  </div>
+<% end %>
