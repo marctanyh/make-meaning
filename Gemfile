@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 
 # image uploads to Amazon S3
-gem 'carrierwave', "0.10.0"
+gem 'carrierwave', "1.3.2"
 gem 'fog', '~> 1.37.0'
 gem 'carrierwave-postgresql-table', '~> 1.1.0'
 gem 'rmagick'
